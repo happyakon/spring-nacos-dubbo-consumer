@@ -1,8 +1,8 @@
 package com.akon.spring.consumer.facade.api;
 
-import com.akon.spring.consumer.facade.dto.UserInfo;
+import com.akon.spring.consumer.facade.dto.UserInfoDto;
 
 public interface UserInfoFacade {
 
-    UserInfo getUserInfo();
+    UserInfoDto getUserInfo();
 }

@@ -60,6 +60,11 @@
             <groupId>com.alibaba.boot</groupId>
             <artifactId>nacos-discovery-spring-boot-starter</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-privoder-facade</artifactId>
+        </dependency>
     </dependencies>
 
 

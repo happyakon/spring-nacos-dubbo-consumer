@@ -1,7 +1,7 @@
 package com.akon.spring.consumer.bootstrap.rest;
 
 import com.akon.spring.consumer.facade.api.UserInfoFacade;
-import com.akon.spring.consumer.facade.dto.UserInfo;
+import com.akon.spring.consumer.facade.dto.UserInfoDto;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +15,7 @@ public class UserInfoRest {
     UserInfoFacade userInfoFacade;
 
     @RequestMapping("/getUser")
-    public UserInfo getUserInfo(){
+    public UserInfoDto getUserInfo(){
         return userInfoFacade.getUserInfo();
     }
 }
