@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.akon.spring</groupId>
+        <artifactId>spring-nacos-dubbo-consumer</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <artifactId>nacos-dubbo-consumer-bootstrap</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-consumer-facade</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-consumer-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-consumer-domain</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>nacos-dubbo-consumer-bootstrap</finalName>
+        <plugins>
+            <!--将包打到target/lib目录下-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${basedir}/target/lib</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
