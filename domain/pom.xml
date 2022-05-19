@@ -62,8 +62,13 @@
         </dependency>
 
         <dependency>
-            <groupId>com.akon.spring</groupId>
-            <artifactId>nacos-dubbo-privoder-facade</artifactId>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
         </dependency>
     </dependencies>
 

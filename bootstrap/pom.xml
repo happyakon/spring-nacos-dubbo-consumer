@@ -9,7 +9,6 @@
         <relativePath/>
     </parent>
     <artifactId>nacos-dubbo-consumer-bootstrap</artifactId>
-
     <dependencies>
         <dependency>
             <groupId>com.akon.spring</groupId>
@@ -23,10 +22,18 @@
             <groupId>com.akon.spring</groupId>
             <artifactId>nacos-dubbo-consumer-domain</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-consumer-repository</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.akon.spring</groupId>
+            <artifactId>nacos-dubbo-consumer-integration</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>nacos-dubbo-consumer-bootstrap</finalName>
+        <finalName>nnacos-dubbo-consumer-bootstrap</finalName>
         <plugins>
             <!--将包打到target/lib目录下-->
             <plugin>
@@ -34,6 +41,24 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <outputDirectory>${basedir}/target/lib</outputDirectory>
+                    <classifier>executable</classifier>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source> <!-- depending on your project -->
+                    <target>1.8</target> <!-- depending on your project -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                        <!-- other annotation processors -->
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
         </plugins>

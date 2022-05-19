@@ -3,9 +3,39 @@ server:
 spring:
   application:
     name: spring-nacos-consumer
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://279fs67493.wicp.vip:21229/common_dev?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 20
+      max-wait: 6000
+      validation-query: select 1 from dual
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-open-prepared-statements: -1
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+logging:
+  level:
+    root: info
+    com.akon.spring.consumer.repository.dao: debug
+  file:
+    path: logs
+  config: classpath:logback-spring.xml
 nacos:
   config:
     server-addr: 47.101.203.160:8848
+
 dubbo:
   application:
     name: ${spring.application.name}
