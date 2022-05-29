@@ -5,7 +5,7 @@ spring:
     name: spring-nacos-consumer
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://279fs67493.wicp.vip:21229/common_dev?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://45.253.64.55:12791/common_dev?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -40,7 +40,7 @@ dubbo:
   application:
     name: ${spring.application.name}
   registry:
-    address: nacos://47.101.203.160:8848
+    address: nacos://45.253.64.55:12792
   protocol:
     name: dubbo
     port: 12211
