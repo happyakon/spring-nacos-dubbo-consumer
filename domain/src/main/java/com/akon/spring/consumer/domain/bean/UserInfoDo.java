@@ -2,6 +2,8 @@ package com.akon.spring.consumer.domain.bean;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 
 @Data
 public class UserInfoDo {
@@ -13,7 +15,7 @@ public class UserInfoDo {
 
     private Long userScore;
 
-    private Double userSalary;
+    private BigDecimal userSalary;
 
     private String userSex;
 

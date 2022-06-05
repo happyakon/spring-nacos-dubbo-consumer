@@ -18,9 +18,9 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
   <insert id="insert" parameterType="com.akon.spring.consumer.repository.entity.Person">
-    insert into person (id, name, job, 
+    insert into person (name, job,
       create_date, update_date)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, 
+    values (#{name,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR},
       #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.akon.spring.consumer.repository.entity.Person">

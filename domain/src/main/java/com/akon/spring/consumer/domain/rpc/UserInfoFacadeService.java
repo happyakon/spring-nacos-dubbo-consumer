@@ -7,4 +7,6 @@ import java.util.List;
 public interface UserInfoFacadeService {
 
     List<UserInfoDo> getUserInfo();
+
+    int insert(UserInfoDo record);
 }

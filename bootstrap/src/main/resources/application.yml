@@ -5,7 +5,7 @@ spring:
     name: spring-nacos-consumer
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://45.253.64.55:12791/common_dev?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://45.253.64.55:12791/consumer_dev?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -34,8 +34,7 @@ logging:
   config: classpath:logback-spring.xml
 nacos:
   config:
-    server-addr: 47.101.203.160:8848
-
+    server-addr: 45.253.64.55:12792
 dubbo:
   application:
     name: ${spring.application.name}
@@ -44,3 +43,17 @@ dubbo:
   protocol:
     name: dubbo
     port: 12211
+seata:
+  config:
+    type: nacos
+    nacos:
+      data-id: seata.properties
+      group: SEATA_GROUP
+      server-addr: 192.168.2.106:8848
+  registry:
+    type: nacos
+    nacos:
+      group: SEATA_GROUP
+      server-addr: 192.168.2.106:8848
+      application: seata-server
+  tx-service-group: akon_tx_group

@@ -12,4 +12,6 @@ public interface UserInfoConvert {
     UserInfoConvert INSTANCE= Mappers.getMapper(UserInfoConvert.class);
 
     List<UserInfoDo> toDo(List<UserInfoDto> records);
+
+    UserInfoDto toDto(UserInfoDo record);
 }
