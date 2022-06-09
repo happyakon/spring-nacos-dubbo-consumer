@@ -32,7 +32,6 @@ public class PersonServiceImpl implements PersonService {
         userInfoDto.setUserName("陈彬");
         userInfoDto.setUserAge(33);
         userInfoDto.setUserSalary(new BigDecimal(29000));
-        int i=1/0;
         int insert1 = userInfoFacadeService.insert(UserInfoConvert.INSTANCE.toDo(userInfoDto));
         if(insert>0&&insert1>0){
             return "success";
