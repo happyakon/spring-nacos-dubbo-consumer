@@ -5,7 +5,7 @@ import com.akon.spring.consumer.domain.rpc.UserInfoFacadeService;
 import com.akon.spring.consumer.integration.convert.UserInfoConvert;
 import com.akon.spring.provider.facade.api.UserInfoFacade;
 import com.akon.spring.provider.facade.dto.UserInfoDto;
-import com.alibaba.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 public class UserInfoFacadeServiceImpl implements UserInfoFacadeService {
 
-    @Reference
+    @DubboReference
     UserInfoFacade facade;
 
     @Override
