@@ -13,6 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+      <revision>0.0.1-SNAPSHOT</revision>
+    </properties>
+
+
     <modules>
         <module>bootstrap</module>
         <module>facade</module>
@@ -27,33 +32,33 @@
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-consumer-facade</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-consumer-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-consumer-domain</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-consumer-repository</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-consumer-integration</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.akon.spring</groupId>
                 <artifactId>nacos-dubbo-privoder-facade</artifactId>
-                <version>${nacos-dubbo-privoder-facade.version}</version>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
