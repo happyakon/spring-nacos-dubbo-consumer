@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
+import java.util.Random;
 
 
 @Service
@@ -29,10 +30,12 @@ public class PersonServiceImpl implements PersonService {
     public String addPerson(PersonDTO request) {
         int insert = repository.insert(PersonConvert.INSTANCE.toDo(request));
         UserInfoDto userInfoDto=new UserInfoDto();
-        userInfoDto.setUserName("陈彬");
-        userInfoDto.setUserAge(33);
-        userInfoDto.setUserSalary(new BigDecimal(29000));
+        userInfoDto.setUserName("");
+        userInfoDto.setUserAge(new Random().nextInt(80));
+        userInfoDto.setUserSalary(new BigDecimal(new Random().nextDouble()));
         int insert1 = userInfoFacadeService.insert(UserInfoConvert.INSTANCE.toDo(userInfoDto));
+        System.out.println("local insert="+insert);
+        System.out.println("remote insert="+insert1);
         if(insert>0&&insert1>0){
             return "success";
         }

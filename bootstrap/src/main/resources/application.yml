@@ -1,7 +1,8 @@
 server:
   port: 8091
 nacos:
-  server-address: 45.253.64.55:12792
+  server-address: 47.101.203.160:8848
+#  server-address: 45.253.64.55:12792
 spring:
   application:
     name: spring-nacos-consumer
@@ -49,6 +50,8 @@ dubbo:
   protocol:
     name: dubbo
     port: 12211
+  consumer:
+    timeout: 30000
 seata:
   config:
     type: nacos
